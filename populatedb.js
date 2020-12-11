@@ -19,6 +19,7 @@ var BookInstance = require('./models/bookinstance')
 
 var mongoose = require('mongoose');
 var mongoDB = userArgs[0];
+//Set up default mongoose connection
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
